@@ -58,3 +58,16 @@ body {
     box-shadow: 13px 13px 10px rgb(34, 34, 34);
     font-size: 22px;
 }
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+
+    #titulo, #tituloDois, #tituloTres {
+        width: 80%;
+        height: 80vw;
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
