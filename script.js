@@ -32,14 +32,30 @@ function loadDayContent() {
     }
 }
 
-function day1() {
+function addBackButton() {
+    const backButton = document.createElement('button');
+    backButton.id = 'backButton';
+    backButton.className = 'back-button';
+    backButton.textContent = 'Voltar';
+    document.getElementById('content').appendChild(backButton);
+
+    backButton.addEventListener('click', () => {
+        location.href = 'index.html';
+    });
+}
+
+function createContent(html) {
     const content = document.getElementById('content');
-    content.innerHTML = `
+    content.innerHTML = html;
+    addBackButton();
+}
+
+function day1() {
+    createContent(`
         <div id="titulo"></div>
         <div id="tituloDois"></div>
         <div id="tituloTres"></div>
-        <button id="backButton" class="back-button">Voltar</button>
-    `;
+    `);
 
     let numeroUm = 1;
     let stringUm = '1';
@@ -68,60 +84,72 @@ function day1() {
     } else {
         document.getElementById('tituloTres').innerHTML = textoElse;
     }
-
-    document.getElementById('backButton').addEventListener('click', () => {
-        location.href = 'index.html';
-    });
 }
 
 function day2() {
-    const content = document.getElementById('content');
-    content.innerHTML = `
-        <div id="titulo"></div>
-        <button id="backButton" class="back-button">Voltar</button>
-    `;
+    createContent(`
+        <div id="paragrafos">
+            <p id="primeiroTexto"></p>
+            <p id="segundoTexto"></p>
+            <p id="terceiroTexto">Perguntas e Respostas</p>
+        </div>
+    `);
 
-    document.getElementById('backButton').addEventListener('click', () => {
-        location.href = 'index.html';
-    });
+    let nome = prompt("Qual seu nome?");
+    let idade = prompt("Quantos anos você tem?");
+    let linguagem = prompt("Qual linguagem de programação você está estudando?");
+
+    if (nome && idade && linguagem) {
+        document.getElementById('primeiroTexto').innerHTML = `1 - Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem}!`;
+    } else {
+        document.getElementById('primeiroTexto').innerHTML = "Informações inválidas, preencha os campos vazios!";
+    }
+
+    let resposta = prompt(`Você gosta de estudar ${linguagem}? Responda com o número 1 para SIM ou 2 para NÃO.`);
+
+    if (resposta == 1) {
+        document.getElementById('segundoTexto').innerHTML = "2 - Muito bom! Continue estudando e você terá muito sucesso.";
+    } else if (resposta == 2) {
+        document.getElementById('segundoTexto').innerHTML = "Ahh que pena... Já tentou aprender outras linguagens?";
+    }
 }
 
 function day3() {
+    createContent(`
+        <div id="titulo"></div>
+    `);
+
     // Add specific JavaScript code for Day 3 here
 }
 
 function day4() {
+    createContent(`
+        <div id="titulo"></div>
+    `);
+
     // Add specific JavaScript code for Day 4 here
 }
 
 function day5() {
+    createContent(`
+        <div id="titulo"></div>
+    `);
+
     // Add specific JavaScript code for Day 5 here
 }
 
 function day6() {
+    createContent(`
+        <div id="titulo"></div>
+    `);
+
     // Add specific JavaScript code for Day 6 here
 }
 
 function day7() {
+    createContent(`
+        <div id="titulo"></div>
+    `);
+
     // Add specific JavaScript code for Day 7 here
-}
-
-/*let nome = prompt("Qual seu nome?");
-let idade = prompt("Quantos anos você tem?");
-let linguagem = prompt("Qual linguagem de programação você está estudando?");
-
-if (nome, idade, linguagem != 0){
-    primeiroTexto.innerHTML = `1 - Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem} !`;
-    } else {
-        primeiroTexto.innerHTML = "Informações inválidas, preencha os campos vazios !";
-    }
-
-let resposta = prompt(`Você gosta de estudar ${linguagem} ? Responda com o número 1 para SIM ou 2 para NÃO. `);
-    
-if (resposta == 1){
-    segundoTexto.innerHTML = "2 - Muito bom! Continue estudando e você terá muito sucesso.";
-}
-    
-if (resposta == 2){
-    segundoTexto.innerHTML = "Ahh que pena... Já tentou aprender outras linguagens?";
 }
