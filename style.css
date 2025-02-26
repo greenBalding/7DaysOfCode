@@ -12,9 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    gap: 20px;
     padding: 20px;
-    text-align: center;
 }
 
 header {
@@ -79,6 +77,8 @@ main {
     flex-wrap: wrap;
 }
 
+/* ESTILIZAÇÃO DO DESAFIO DO DIA 1 */
+
 #titulo, #tituloDois, #tituloTres {
     width: 200px;
     height: 200px;
@@ -105,6 +105,8 @@ main {
     background-color: rgb(184, 21, 21);
 }
 
+/* ////////////////////////////////// */
+
 .back-button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -127,17 +129,19 @@ main {
     }
 }
 
+/* ESTILIZAÇÃO DO DESAFIO DO DIA 2 */
+
 #paragrafos {
     box-sizing: border-box;
-    width: 70%;
-    height: 70%;
+    width: 100%;
+    height:70%;
     display: flex;
     justify-content: space-between;
     border: 2px solid black;
     border-radius: 5px;
     flex-direction: column;
     background-color: #74512D;
-    padding: 20px;
+    padding: 10px;
     gap: 20px;
 }
 
@@ -147,10 +151,8 @@ main {
     padding: 10px;
     background-color: #543310;
     color: #fff5c3;
-    flex: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 15px;
 }
 
 #primeiroTexto {
@@ -161,13 +163,14 @@ main {
 #segundoTexto {
     order: 3;
     align-self: flex-end;
-    flex-wrap: wrap;
 }
 
 #terceiroTexto {
+    display:flex;
     order: 2;
     align-self: center;
-    font-size: 2rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
     color: #fff5c3;
-    text-align: center;
 }
+/* /////////////////////////////// */

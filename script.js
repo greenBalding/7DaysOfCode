@@ -68,21 +68,21 @@ function day1() {
     let textoElse = 'As variáveis numero e string não têm o mesmo valor';
 
     if (numeroUm == stringUm) {
-        document.getElementById('titulo').innerHTML = texto;
+        titulo.innerHTML = texto;
     } else {
-        document.getElementById('titulo').innerHTML = textoElse;
+        titulo.innerHTML = textoElse;
     }
 
     if (numeroTrinta == stringTrinta) {
-        document.getElementById('tituloDois').innerHTML = texto;
+        tituloDois.innerHTML = texto;
     } else {
-        document.getElementById('tituloDois').innerHTML = textoElse;
+        tituloDois.innerHTML = textoElse;
     }
 
     if (numeroDez == stringDez) {
-        document.getElementById('tituloTres').innerHTML = texto;
+        tituloTres.innerHTML = texto;
     } else {
-        document.getElementById('tituloTres').innerHTML = textoElse;
+        tituloTres.innerHTML = textoElse;
     }
 }
 
@@ -100,17 +100,17 @@ function day2() {
     let linguagem = prompt("Qual linguagem de programação você está estudando?");
 
     if (nome && idade && linguagem) {
-        document.getElementById('primeiroTexto').innerHTML = `1 - Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem}!`;
+        primeiroTexto.innerHTML = `1 - Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem}!`;
     } else {
-        document.getElementById('primeiroTexto').innerHTML = "Informações inválidas, preencha os campos vazios!";
+        primeiroTexto.innerHTML = "Informações inválidas, preencha os campos vazios!";
     }
 
     let resposta = prompt(`Você gosta de estudar ${linguagem}? Responda com o número 1 para SIM ou 2 para NÃO.`);
 
     if (resposta == 1) {
-        document.getElementById('segundoTexto').innerHTML = "2 - Muito bom! Continue estudando e você terá muito sucesso.";
+        segundoTexto.innerHTML = "2 - Muito bom! Continue estudando e você terá muito sucesso.";
     } else if (resposta == 2) {
-        document.getElementById('segundoTexto').innerHTML = "Ahh que pena... Já tentou aprender outras linguagens?";
+        segundoTexto.innerHTML = "Ahh que pena... Já tentou aprender outras linguagens?";
     }
 }
 
