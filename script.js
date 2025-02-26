@@ -105,3 +105,23 @@ function day6() {
 function day7() {
     // Add specific JavaScript code for Day 7 here
 }
+
+/*let nome = prompt("Qual seu nome?");
+let idade = prompt("Quantos anos você tem?");
+let linguagem = prompt("Qual linguagem de programação você está estudando?");
+
+if (nome, idade, linguagem != 0){
+    primeiroTexto.innerHTML = `1 - Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem} !`;
+    } else {
+        primeiroTexto.innerHTML = "Informações inválidas, preencha os campos vazios !";
+    }
+
+let resposta = prompt(`Você gosta de estudar ${linguagem} ? Responda com o número 1 para SIM ou 2 para NÃO. `);
+    
+if (resposta == 1){
+    segundoTexto.innerHTML = "2 - Muito bom! Continue estudando e você terá muito sucesso.";
+}
+    
+if (resposta == 2){
+    segundoTexto.innerHTML = "Ahh que pena... Já tentou aprender outras linguagens?";
+}
