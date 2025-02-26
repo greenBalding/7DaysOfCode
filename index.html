@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Day One</title>
+    <title>7DaysOfCode</title>
 </head>
 <body>
 
-    <div id="titulo"></div>
-    <div id="tituloDois"></div>
-    <div id="tituloTres"></div>
+    <header>
+        <h1>Desafio 7DaysOfCode</h1>
+        <p>Bem-vindo ao nosso desafio de codificação! Clique em um dia para ver o desafio correspondente.</p>
+    </header>
 
-<script src="day-1.js" defer></script>
+    <main>
+        <div id="dia1" class="card" onclick="loadDay(1)">Dia 1</div>
+        <div id="dia2" class="card" onclick="loadDay(2)">Dia 2</div>
+        <div id="dia3" class="card" onclick="loadDay(3)">Dia 3</div>
+        <div id="dia4" class="card" onclick="loadDay(4)">Dia 4</div>
+        <div id="dia5" class="card" onclick="loadDay(5)">Dia 5</div>
+        <div id="dia6" class="card" onclick="loadDay(6)">Dia 6</div>
+        <div id="dia7" class="card" onclick="loadDay(7)">Dia 7</div>
+        <div id="git1" class="card" onclick="location.href='https://github.com/eduardoDeAAMelo'">@eduardoDeAAMelo</div>
+        <div id="git2" class="card" onclick="location.href='https://github.com/greenBalding'">@greenBalding</div>
+    </main>
+
+    <div id="content"></div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>

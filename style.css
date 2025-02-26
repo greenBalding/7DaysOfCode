@@ -5,69 +5,124 @@
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient( rgb(68, 182, 40), rgb(201, 204, 16), rgb(192, 27, 27));
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgb(68, 182, 40), rgb(201, 204, 16), rgb(192, 27, 27));
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5%;
+    min-height: 100vh;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
 }
 
-#titulo {
-    width: 200px;
-    height: 200px;
+header {
+    margin-bottom: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 10px;
+    padding: 10px;
     border: 3px solid black;
     background-color: forestgreen;
     color: #000000;
     border-radius: 8px;
-    box-shadow: 13px 13px 10px rgb(34, 34, 34);
-    font-size: 22px;
+    box-shadow: 5px 5px 10px rgb(34, 34, 34);
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    word-wrap: break-word;
 }
 
-#tituloDois {
-    width: 200px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 10px;
-    border: 3px solid black;
-    background-color: rgb(209, 196, 11);
-    color: #000000;
-    border-radius: 8px;
-    box-shadow: 13px 13px 10px rgb(34, 34, 34);
-    font-size: 22px;
-}
+#dia2 { background-color: rgb(209, 196, 11); }
+#dia3 { background-color: rgb(184, 21, 21); }
+#dia4 { background-color: rgb(68, 182, 40); }
+#dia5 { background-color: rgb(201, 204, 16); }
+#dia6 { background-color: rgb(192, 27, 27); }
+#dia7 { background-color: rgb(46, 182, 85); }
 
-#tituloTres {
-    width: 200px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 10px;
-    border: 3px solid black;
-    background-color: rgb(184, 21, 21);
-    color: #000000;
-    border-radius: 8px;
-    box-shadow: 13px 13px 10px rgb(34, 34, 34);
-    font-size: 22px;
+#git1, #git2 {
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
 }
 
 @media (max-width: 600px) {
-    body {
-        flex-direction: column;
+    main {
+        grid-template-columns: 1fr;
     }
 
-    #titulo, #tituloDois, #tituloTres {
+    .card {
         width: 80%;
         height: 80vw;
-        max-width: 200px;
-        max-height: 200px;
+        max-width: 150px;
+        max-height: 150px;
+    }
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#titulo, #tituloDois, #tituloTres {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px;
+    border: 3px solid black;
+    color: #000000;
+    border-radius: 8px;
+    box-shadow: 13px 13px 10px rgb(34, 34, 34);
+    font-size: 22px;
+}
+
+#titulo {
+    background-color: forestgreen;
+}
+
+#tituloDois {
+    background-color: rgb(209, 196, 11);
+}
+
+#tituloTres {
+    background-color: rgb(184, 21, 21);
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+@media (max-width: 600px) {
+    #content {
+        flex-direction: column;
     }
 }
