@@ -153,3 +153,68 @@ function day7() {
 
     // Add specific JavaScript code for Day 7 here
 }
+
+
+
+/*function gravarValor(){
+    const valor = document.getElementById("informacao").value;
+    const button = document.getElementById("button__dois");
+
+    if (valor === "Frontend"){
+        paragrafo__dois.innerHTML = "Você quer aprender React ou aprender Vue?";
+        button.setAttribute("onclick", "gravarValorDoisFront()");
+    }
+    if (valor === "Backend"){
+        paragrafo__dois.innerHTML = "Você quer aprender C# ou aprender Java?";
+        button.setAttribute("onclick", "gravarValorDoisBack()");
+    }s
+}
+
+function gravarValorDoisFront(){
+    const valorDois = document.getElementById("informacao__dois").value;
+
+    if (valorDois === "React" || valorDois === "Vue"){
+
+        paragrafo__tres.innerHTML = `Muito bom! ${valorDois} é um excelente começo. Você pode escolher entre seguir se especializando em Frontend ou seguir se desenvolvendo para se tornar Fullstack.`;
+    } else {
+        alert("Escolha entre React e Vue");
+    }
+}
+
+function gravarValorDoisBack(){
+    const valorDois = document.getElementById("informacao__dois").value;
+    if (valorDois === "C#" || valorDois === "Java"){
+
+        paragrafo__tres.innerHTML = `Muito bom! ${valorDois} é um excelente começo. Você pode escolher entre seguir se especializando em Backend ou seguir se desenvolvendo para se tornar Fullstack.`;
+    } else {
+        alert("Escolha entre C# e Java")
+    }
+}
+
+function gravarValorTres (){
+    const valorTres = document.getElementById("informacao__tres").value;
+    if (valorTres === "Frontend" || valorTres === "Backend" || valorTres === "Fullstack"){
+        paragrafo__quatro.innerHTML = `${valorTres} é uma ótima escolha, essa área abrange diversos setores. Quais são as tecnologias nas quais você gostaria de se especializar ou de conhecer?`;
+    }
+}
+
+const react = "React";
+const vue = "Vue";
+const cSharp = "C#";
+const java = "Java";
+
+function gravarValorQuatro(){
+    const valorQuatro = document.getElementById("informacao__quatro").value;
+
+    while (valorQuatro != react || valorQuatro != vue || valorQuatro != cSharp || valorQuatro != java){
+        const resultado = prompt("Tem mais alguma tecnologia que você gostaria de conhecer?");
+        if(resultado == react || resultado == vue || resultado == cSharp || resultado == java){
+            paragrafo__cinco.innerHTML = `${resultado} é uma linguagem mundialmente usada! Continue estudando e sera recompensando com muito conhecimento!`;
+            break;
+        }
+    }
+    if (valorQuatro == react || valorQuatro == vue || valorQuatro == cSharp || valorQuatro == java){
+        paragrafo__cinco.innerHTML = `${valorQuatro} é uma linguagem sensacional!`;
+    }
+
+}*/
