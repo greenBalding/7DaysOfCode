@@ -234,3 +234,45 @@ function day7() {
 
     // Add specific JavaScript code for Day 7 here
 }
+
+
+
+/* Desafio do Dia 4
+
+let numeroLimite = 10;
+let tentativas = 0;
+let numeroMisterioso = gerarNumeroAleatorio();
+function verificarPalpite() {
+
+    while (tentativas < 3){
+        let palpite = prompt("Escolha um número entre 0 e 10");
+        if (palpite == numeroMisterioso) {
+            alert("Parabéns, você acertou!");
+            break
+        } else {
+            alert("Não foi dessa vez, você errou o palpite.");
+            if (tentativas == 2){
+                alert(`O número misterioso era ${numeroMisterioso}`)
+            }
+        };
+        tentativas ++;
+    }
+}
+
+function gerarNumeroAleatorio() {
+    let listaDeNumerosSorteados = [];
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
+
+    if (quantidadeDeElementosNaLista == numeroLimite) {
+        listaDeNumerosSorteados = [];
+    }
+    if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
+        return gerarNumeroAleatorio();
+    } else {
+        listaDeNumerosSorteados.push(numeroEscolhido);
+        console.log(listaDeNumerosSorteados)
+        return numeroEscolhido;
+    }
+}
+*/
