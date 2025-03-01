@@ -116,70 +116,75 @@ function day2() {
 
 function day3() {
     createContent(`
-        <div id="conteudoprincipal">
-            <p id="paragrafoum">Responda no campo abaixo qual das duas áreas você deseja seguir: Frontend ou Backend? Conforme for respondendo irá aparecer outras perguntas.</p>
-            <div id="conteudosegundo">
+        <div id="conteudo__principal">
+            <p id="paragrafo__um">Responda no campo abaixo qual das duas áreas você deseja seguir: Frontend ou Backend? Conforme for respondendo irá aparecer outras perguntas.</p>
+            <div id="conteudo__segundo">
                 <input type="text" id="informacao" placeholder="Digite algo">
-                <button id="buttonum">Gravar</button>
+                <button id="button__um">Gravar</button>
             </div>
-            <p id="paragrafodois"></p>
-            <div id="conteudoterceiro">
-                <input type="text" id="informacaodois" placeholder="Digite algo">
-                <button id="buttondois">Gravar</button>
+            <p id="paragrafo__dois"></p>
+            <div id="conteudo__terceiro">
+                <input type="text" id="informacao__dois" placeholder="Digite algo">
+                <button id="button__dois">Gravar</button>
             </div>
-            <p id="paragrafotres"></p>
-            <div id="conteudoquarto">
-                <input type="text" id="informacaotres" placeholder="Digite algo">
-                <button id="buttontres">Gravar</button>
+            <p id="paragrafo__tres"></p>
+            <div id="conteudo__quarto">
+                <input type="text" id="informacao__tres" placeholder="Digite algo">
+                <button id="button__tres">Gravar</button>
             </div>
-            <p id="paragrafoquatro"></p>
+            <p id="paragrafo__quatro"></p>
+            <div id="conteudo__quinto">
+                <input type="text" id="informacao__quatro" placeholder="Digite algo">
+                <button id="button__quatro">Gravar</button>
+            </div>
+            <p id="paragrafo__cinco"></p>
         </div>
     `);
 
-    document.getElementById("buttonum").addEventListener("click", gravarValor);
-    document.getElementById("buttondois").addEventListener("click", gravarValorDois);
-    document.getElementById("buttontres").addEventListener("click", gravarValorTres);
+    document.getElementById("button__um").addEventListener("click", gravarValor);
+    document.getElementById("button__tres").addEventListener("click", gravarValorTres);
+    document.getElementById("button__quatro").addEventListener("click", gravarValorQuatro);
 
     function gravarValor() {
         const valor = document.getElementById("informacao").value;
-        const button = document.getElementById("buttondois");
+        const button = document.getElementById("button__dois");
 
         if (valor === "Frontend") {
-            document.getElementById("paragrafodois").innerHTML = "Você quer aprender React ou aprender Vue?";
+            document.getElementById("paragrafo__dois").innerHTML = "Você quer aprender React ou aprender Vue?";
             button.onclick = gravarValorDoisFront;
         } else if (valor === "Backend") {
-            document.getElementById("paragrafodois").innerHTML = "Você quer aprender C# ou aprender Java?";
+            document.getElementById("paragrafo__dois").innerHTML = "Você quer aprender C# ou aprender Java?";
             button.onclick = gravarValorDoisBack;
         }
     }
 
     function gravarValorDoisFront() {
-        const valorDois = document.getElementById("informacaodois").value;
+        const valorDois = document.getElementById("informacao__dois").value;
         const valor = document.getElementById("informacao").value;
 
         if (valorDois === "React" || valorDois === "Vue") {
-            document.getElementById("paragrafotres").innerHTML = `Muito bom! ${valorDois} é um excelente começo. Agora você pode escolher entre seguir se especializando em ${valor} ou seguir se desenvolvendo para se tornar Fullstack. Quais são as tecnologias nas quais você gostaria de se especializar ou de conhecer?`;
+            document.getElementById("paragrafo__tres").innerHTML = `Muito bom! ${valorDois} é um excelente começo. Agora você pode escolher entre seguir se especializando em ${valor} ou seguir se desenvolvendo para se tornar Fullstack. Quais são as tecnologias nas quais você gostaria de se especializar ou de conhecer?`;
         } else {
             alert("Escolha entre React ou Vue");
         }
     }
 
     function gravarValorDoisBack() {
-        const valorDois = document.getElementById("informacaodois").value;
+        const valorDois = document.getElementById("informacao__dois").value;
         const valor = document.getElementById("informacao").value;
 
         if (valorDois === "C#" || valorDois === "Java") {
-            document.getElementById("paragrafotres").innerHTML = `Muito bom! ${valorDois} é um excelente começo. Agora você pode escolher entre seguir se especializando em ${valor} ou seguir se desenvolvendo para se tornar Fullstack. Quais são as tecnologias nas quais você gostaria de se especializar ou de conhecer?`;
+            document.getElementById("paragrafo__tres").innerHTML = `Muito bom! ${valorDois} é um excelente começo. Agora você pode escolher entre seguir se especializando em ${valor} ou seguir se desenvolvendo para se tornar Fullstack. Quais são as tecnologias nas quais você gostaria de se especializar ou de conhecer?`;
         } else {
             alert("Escolha entre C# ou Java");
         }
     }
 
     function gravarValorTres() {
-        const valorTres = document.getElementById("informacaotres").value;
+        const valorTres = document.getElementById("informacao__tres").value;
         if (valorTres === "Frontend" || valorTres === "Backend" || valorTres === "Fullstack") {
-            document.getElementById("paragrafoquatro").innerHTML = `${valorTres} é uma ótima escolha, essa área abrange diversos setores. Quais são as tecnologias nas quais você gostaria de se especializar ou de conhecer?`;
-        }
+            paragrafo__quatro.innerHTML = `${valorTres} é uma ótima escolha, essa área abrange diversos setores. Quais são as tecnologias nas quais você gostaria de se especializar ou de conhecer?`;
+        } 
     }
 
     const react = "React";
@@ -188,27 +193,65 @@ function day3() {
     const java = "Java";
 
     function gravarValorQuatro() {
-        const valorQuatro = document.getElementById("informacaoquatro").value;
+        const valorQuatro = document.getElementById("informacao__quatro").value;
 
-        while (valorQuatro != react || valorQuatro != vue || valorQuatro != cSharp || valorQuatro != java) {
-            const resultado = prompt("Tem mais alguma tecnologia que você gostaria de conhecer?");
-            if (resultado == react || resultado == vue || resultado == cSharp || resultado == java) {
-                document.getElementById("paragrafoquatro").innerHTML = `${resultado} é uma linguagem mundialmente usada! Continue estudando e sera recompensando com muito conhecimento!`;
-                break;
-            }
-        }
         if (valorQuatro == react || valorQuatro == vue || valorQuatro == cSharp || valorQuatro == java) {
-            document.getElementById("paragrafoquatro").innerHTML = `${valorQuatro} é uma linguagem sensacional!`;
+            paragrafo__cinco.innerHTML = `${valorQuatro} é uma linguagem sensacional!`;
+        } else {
+            while (valorQuatro != react || valorQuatro != vue || valorQuatro != cSharp || valorQuatro != java) {
+                const resultado = prompt("Tem mais alguma tecnologia que você gostaria de conhecer?");
+                if (resultado == react || resultado == vue || resultado == cSharp || resultado == java) {
+                    paragrafo__cinco.innerHTML = `${resultado} é uma linguagem mundialmente usada! Continue estudando e sera recompensando com muito conhecimento!`;
+                    break;
+                }
+            }
         }
     }
 }
-
 function day4() {
     createContent(`
-        <div id="titulo"></div>
+        <button onclick="verificarPalpite()" id="comecar">START</button>
     `);
 
-    // Add specific JavaScript code for Day 4 here
+    document.getElementById("comecar").addEventListener("click", verificarPalpite);
+
+    let numeroLimite = 10;
+    let tentativas = 0;
+    let numeroMisterioso = gerarNumeroAleatorio();
+
+    function verificarPalpite() {
+
+        while (tentativas < 3){
+            let palpite = prompt("Escolha um número entre 0 e 10");
+            if (palpite == numeroMisterioso) {
+                alert("Parabéns, você acertou!");
+                break
+            } else {
+                alert("Não foi dessa vez, você errou o palpite.");
+                if (tentativas == 2){
+                    alert(`O número misterioso era ${numeroMisterioso}`)
+                }
+            };
+            tentativas ++;
+        }
+    }
+
+    function gerarNumeroAleatorio() {
+        let listaDeNumerosSorteados = [];
+        let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+        let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
+
+        if (quantidadeDeElementosNaLista == numeroLimite) {
+            listaDeNumerosSorteados = [];
+        }
+        if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
+            return gerarNumeroAleatorio();
+        } else {
+            listaDeNumerosSorteados.push(numeroEscolhido);
+            console.log(listaDeNumerosSorteados)
+            return numeroEscolhido;
+        }
+    }
 }
 
 function day5() {
@@ -234,45 +277,3 @@ function day7() {
 
     // Add specific JavaScript code for Day 7 here
 }
-
-
-
-/* Desafio do Dia 4
-
-let numeroLimite = 10;
-let tentativas = 0;
-let numeroMisterioso = gerarNumeroAleatorio();
-function verificarPalpite() {
-
-    while (tentativas < 3){
-        let palpite = prompt("Escolha um número entre 0 e 10");
-        if (palpite == numeroMisterioso) {
-            alert("Parabéns, você acertou!");
-            break
-        } else {
-            alert("Não foi dessa vez, você errou o palpite.");
-            if (tentativas == 2){
-                alert(`O número misterioso era ${numeroMisterioso}`)
-            }
-        };
-        tentativas ++;
-    }
-}
-
-function gerarNumeroAleatorio() {
-    let listaDeNumerosSorteados = [];
-    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
-    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
-
-    if (quantidadeDeElementosNaLista == numeroLimite) {
-        listaDeNumerosSorteados = [];
-    }
-    if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
-        return gerarNumeroAleatorio();
-    } else {
-        listaDeNumerosSorteados.push(numeroEscolhido);
-        console.log(listaDeNumerosSorteados)
-        return numeroEscolhido;
-    }
-}
-*/

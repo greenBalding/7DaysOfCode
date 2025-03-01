@@ -60,12 +60,8 @@ main {
     main {
         grid-template-columns: 1fr;
     }
-
     .card {
-        width: 80%;
-        height: 80vw;
-        max-width: 150px;
-        max-height: 150px;
+        width: auto;
     }
 }
 
@@ -173,9 +169,9 @@ main {
     font-size: 3rem;
     color: #fff5c3;
 }
-/* /////////////////////////////// */
+
 /* css para o desafio do dia 3 */
-#conteudoprincipal {
+#conteudo__principal {
     width: 80%;
     display: flex;
     align-items: flex-start;
@@ -187,28 +183,11 @@ main {
     background-color: rgb(250, 246, 246);
 }
 
-#informacao, #buttonum, #informacaodois, #buttondois, #informacaotres, #buttontres {
+#informacao, #button__um, #informacao__dois, #button__dois, #informacao__tres, #button__tres, #informacao__quatro, #button__quatro {
     padding: 5px 8px;
 }
 
-
-/* Desafio Dia 4 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-}
-
+/* CSS para o desafio do dia 4 */
 #comecar {
     padding: 30px;
     font-family:cursive;
@@ -217,6 +196,7 @@ body {
     font-size: 30px;
     background-image:radial-gradient(rgb(94, 245, 63), rgb(142, 233, 147));
     border-radius: 8px;
+    border: 1px solid black;
     box-shadow: 8px 8px 5px rgb(51, 51, 51);
     cursor: pointer;
 }
@@ -224,4 +204,4 @@ body {
     background-image:radial-gradient(rgb(207, 241, 210), rgb(181, 238, 181));
 }
 
-*/
+/* /////////////////////////////// */
