@@ -256,10 +256,50 @@ function day4() {
 
 function day5() {
     createContent(`
-        <div id="titulo"></div>
+    <div id="parte__principal">
+        <h1 id="lista">Lista de compras:</h1>
+        <p id="listaFrutas"></p>
+        <p id="listaLaticinios"></p>
+        <p id="listaCongelados"></p>
+        <p id="listaDoces"></p>
+    </div>
+
     `);
 
-    // Add specific JavaScript code for Day 5 here
+    const frutas = [];
+    const laticinios = [];
+    const congelados = [];
+    const doces = [];
+
+    const pergunta = prompt("Você deseja adicionar uma comida na sua lista de compras? Responda com Sim ou Não");
+    while (pergunta == "Sim"){
+        const comida = prompt("Qual comida você deseja inserir?");
+        const categoria = prompt("Em qual das seguintes categoria essa comida se encaixa? Opções: frutas, laticinios, congelados e doces");
+        if (categoria == "frutas") {
+            frutas.push(comida);
+        }
+        if (categoria == "laticinios") {
+            laticinios.push(comida);
+        }
+        if (categoria == "congelados") {
+            congelados.push(comida);
+        }
+        if (categoria == "doces") {
+            doces.push(comida);
+        }
+        const terminar = prompt("Você quer adicionar mais comida? Responda com Sim ou Não")
+        if (terminar == "Não"){
+            listaFrutas.innerHTML = `Frutas: ${frutas} ✔️`;
+            listaLaticinios.innerHTML = `Laticínios: ${laticinios} ✔️`;
+            listaCongelados.innerHTML = `Congelados: ${congelados} ✔️`;
+            listaDoces.innerHTML = `Doces: ${doces} ✔️`;
+            break
+        }
+
+    } if (pergunta == "Não"){
+        lista.innerHTML = "Sua lista está vazia ✖️";
+    }
+
 }
 
 function day6() {
