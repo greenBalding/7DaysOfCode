@@ -304,10 +304,77 @@ function day5() {
 
 function day6() {
     createContent(`
-        <div id="titulo"></div>
+    <div id="p__principal">
+        <h1 id="lista">Lista de compras:</h1>
+        <p id="listaFrutas"></p>
+        <p id="listaLaticinios"></p>
+        <p id="listaCongelados"></p>
+        <p id="listaDoces"></p>
+    </div>
+
     `);
 
-    // Add specific JavaScript code for Day 6 here
+    const frutas = [];
+    const laticinios = [];
+    const congelados = [];
+    const doces = [];
+
+    const pergunta = prompt("Você deseja adicionar uma comida na sua lista de compras? Responda com Sim ou Não.");
+    while (pergunta == "Sim"){
+        const comida = prompt("Qual comida você deseja inserir?");
+        const categoria = prompt("Em qual das seguintes categoria essa comida se encaixa? Opções: frutas, laticinios, congelados e doces");
+        if (categoria == "frutas") {
+            frutas.push(comida);
+        }
+        if (categoria == "laticinios") {
+            laticinios.push(comida);
+        }
+        if (categoria == "congelados") {
+            congelados.push(comida);
+        }
+        if (categoria == "doces") {
+            doces.push(comida);
+        }
+        
+        alert(` Você já tem na LISTA DE FRUTAS: ${frutas}. Na LISTA DE LATICÍNIOS: ${laticinios}. Na LISTA DE CONGELADOS: ${congelados}. Na LISTA DE DOCES: ${doces}.`);
+
+        const terminar = prompt("Você quer adicionar mais item, remover item, ou finalizar lista? Responda com adicionar, remover, finalizar.");
+        if (terminar == "finalizar"){
+            listaFrutas.innerHTML = `Frutas: ${frutas} ✔️`;
+            listaLaticinios.innerHTML = `Laticínios: ${laticinios} ✔️`;
+            listaCongelados.innerHTML = `Congelados: ${congelados} ✔️`;
+            listaDoces.innerHTML = `Doces: ${doces} ✔️`;
+
+            break
+        }
+        if (terminar == "remover"){
+
+            const removerItem = prompt(`O item que você quer remover pertence à qual categoria? `);
+            /*Responda com o número equivalente à posição dele na ordem da sua categora, lembre-se, o primeiro item da categoria equivale ao número 0. Ex: Lista de frutas: Banana, Morango, Abacaxi. A Banana seria 0, Morange 1, Abacaxi 2...*/
+            if(removerItem == "frutas"){
+                const frutaRemovida = prompt(`Lista de Frutas: ${frutas}. Qual fruta você quer remover? Digite o número de acordo com a posição dele dentro da categoria, lembre-se: a lista começa com 0 no primeiro item da categoria.`);
+                frutas.splice(frutaRemovida);
+            }
+            if(removerItem == "laticinios"){
+                const laticinioRemovido = prompt(`Lista de Laticínio: ${laticinios}. Qual laticinio você quer remover?  Digite o número de acordo com a posição dele na categoria, lembre-se: a lista começa com 0 no primeiro item da categoria.`);
+                laticinios.splice(laticinioRemovido);
+            }
+            if(removerItem == "congelados") {
+                const congeladoRemovido = prompt(`Lista de Congelados: ${congelados}. Qual congelado você quer remover? Digite o número de acordo com a posição dele na categoria, lembre-se: a lista começa com 0 no primeiro item da categoria.`);
+                congelados.splice(congeladoRemovido);
+            }
+            if(removerItem == "doces") {
+                const doceRemovido = prompt(`Lista de Doces: ${doces}. Qual doce você quer remover? Digite o número de acordo com a posição dele na categoria, lembre-se: a lista começa com 0 no primeiro item da categoria.`);
+                doces.splice(doceRemovido);
+            }
+            alert(` Agora você tem na LISTA DE FRUTAS: ${frutas}. Na LISTA DE LATICÍNIOS: ${laticinios}. Na LISTA DE CONGELADOS: ${congelados}. Na LISTA DE DOCES: ${doces}.`);
+
+        }
+
+    } if (pergunta == "Não"){
+        lista.innerHTML = "Sua lista está vazia ✖️";
+    }
+
 }
 
 function day7() {

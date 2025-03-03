@@ -220,5 +220,20 @@ main {
     font-family: cursive;
 }
 
+/*CSS para o desafio do dia 6 */
+#p__principal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 3px solid black;
+    padding: 20px;
+    background-color: rgb(173, 255, 173);
+}
+
+#lista , #listaFrutas, #listaLaticinios, #listaCongelados, #listaDoces {
+    width: 100%;
+    text-decoration: underline;
+    font-family: cursive;
+}
 
 /* /////////////////////////////// */
