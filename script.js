@@ -379,8 +379,77 @@ function day6() {
 
 function day7() {
     createContent(`
-        <div id="titulo"></div>
+        <div id="calculadora">
+        <h1 id="calculadora__titulo">Calculadora</h1>
+        <div id="principal">
+            <div class="caixaUm">
+                <div id="soma">
+                    <p id="paragrafoUm"></p>
+                    <button id="botaoUm">+</button>
+                </div>
+                <div id="subtracao">
+                    <p id="paragrafoDois"></p>
+                    <button id="botaoDois">-</button>
+                </div>
+            </div>
+            <div class="caixaDois">
+                <div id="multiplicacao">
+                    <p id="paragrafoTres"></p>
+                    <button id="botaoTres"> x </button>
+                </div>
+                <div id="divisao">
+                    <p id="paragrafoQuatro"></p>
+                    <button id="botaoQuatro">÷</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     `);
 
-    // Add specific JavaScript code for Day 7 here
+    document.getElementById("botaoUm").addEventListener("click", somarNumeros);
+    document.getElementById("botaoDois").addEventListener("click", subtrairNumeros);
+    document.getElementById("botaoTres").addEventListener("click", multiplicarNumeros);
+    document.getElementById("botaoQuatro").addEventListener("click", dividirNumeros);
+
+    function somarNumeros(){
+        const primeiroNumero = parseInt(prompt("Digite um número"));
+        const segundoNumero = parseInt(prompt("Digite um número para somar com o número digitado anteriormente"));
+        if(primeiroNumero >= 0){
+            let resultado = primeiroNumero + segundoNumero;
+            paragrafoUm.innerHTML = `${primeiroNumero} + ${segundoNumero} = ${resultado}`;
+        }
+    
+    }
+    
+    function subtrairNumeros(){
+        const primeiroNumero = parseInt(prompt("Digite um número"));
+        const segundoNumero = parseInt(prompt("Digite um número para subtrair com o número digitado anteriormente"));
+        if(primeiroNumero >= 0){
+            let resultado = primeiroNumero - segundoNumero;
+            paragrafoDois.innerHTML = `${primeiroNumero} - ${segundoNumero} = ${resultado}`;
+        }
+    
+    }
+    
+    function multiplicarNumeros(){
+        const primeiroNumero = parseInt(prompt("Digite um número"));
+        const segundoNumero = parseInt(prompt("Digite um número para multiplicar com o número digitado anteriormente"));
+        if(primeiroNumero >= 0){
+            let resultado = primeiroNumero * segundoNumero;
+            paragrafoTres.innerHTML = `${primeiroNumero} x ${segundoNumero} = ${resultado}`;
+        }
+    
+    }
+    
+    function dividirNumeros(){
+        const primeiroNumero = parseInt(prompt("Digite um número"));
+        const segundoNumero = parseInt(prompt("Digite um número para dividir com o número digitado anteriormente"));
+        if(primeiroNumero >= 0){
+            let resultado = primeiroNumero / segundoNumero;
+            paragrafoQuatro.innerHTML = `${primeiroNumero} ÷ ${segundoNumero} = ${resultado}`;
+        }
+    
+    }
+    
 }

@@ -236,4 +236,114 @@ main {
     font-family: cursive;
 }
 
+/*CSS para o desafio do dia 7 */
+#calculadora {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 420px;
+    height: 420px;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(20, 20, 20);
+}
+
+#calculadora__titulo{
+    color: white;
+}
+
+#principal{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.caixaUm{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.caixaDois {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#soma {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: yellow;
+    padding: 0px 17px;
+}
+
+#botaoUm, #botaoDois, #botaoTres, #botaoQuatro {
+    font-size: 30px;
+    padding: 0px 20px;
+    border-radius: 5px;
+}
+
+#botaoUm:hover{
+    background-color: rgb(172, 172, 172);
+    cursor: pointer;
+}
+
+#botaoDois:hover{
+    background-color: rgb(172, 172, 172);
+    cursor: pointer;
+}
+
+#botaoTres:hover{
+    background-color: rgb(172, 172, 172);
+    cursor: pointer;
+}
+
+#botaoQuatro:hover{
+    background-color: rgb(172, 172, 172);
+    cursor: pointer;
+}
+
+#subtracao {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: salmon;
+    padding: 0px 17px;
+}
+
+#multiplicacao {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: yellow;
+    padding: 0px 17px;
+}
+
+#divisao {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: salmon;
+    padding: 0px 17px;
+}
+
 /* /////////////////////////////// */
