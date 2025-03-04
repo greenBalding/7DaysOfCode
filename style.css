@@ -101,6 +101,14 @@ main {
     background-color: rgb(184, 21, 21);
 }
 
+@media (max-width: 600px) {
+    #titulo, #tituloDois, #tituloTres {
+        width: 100%;
+        height: auto;
+        font-size: 18px;
+    }
+}
+
 /* ////////////////////////////////// */
 
 .back-button {
@@ -130,7 +138,7 @@ main {
 #paragrafos {
     box-sizing: border-box;
     width: 100%;
-    height:70%;
+    height: 70%;
     display: flex;
     justify-content: space-between;
     border: 2px solid black;
@@ -162,12 +170,24 @@ main {
 }
 
 #terceiroTexto {
-    display:flex;
+    display: flex;
     order: 2;
     align-self: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 3rem;
     color: #fff5c3;
+}
+
+@media (max-width: 600px) {
+    #paragrafos {
+        height: auto;
+    }
+    #primeiroTexto, #segundoTexto {
+        font-size: 12px;
+    }
+    #terceiroTexto {
+        font-size: 2rem;
+    }
 }
 
 /* css para o desafio do dia 3 */
@@ -187,21 +207,38 @@ main {
     padding: 5px 8px;
 }
 
+@media (max-width: 600px) {
+    #conteudo__principal {
+        width: 100%;
+    }
+    #informacao, #informacao__dois, #informacao__tres, #informacao__quatro {
+        width: 100%;
+    }
+}
+
 /* CSS para o desafio do dia 4 */
 #comecar {
     padding: 30px;
-    font-family:cursive;
+    font-family: cursive;
     color: rgb(32, 32, 32);
     border: none;
     font-size: 30px;
-    background-image:radial-gradient(rgb(94, 245, 63), rgb(142, 233, 147));
+    background-image: radial-gradient(rgb(94, 245, 63), rgb(142, 233, 147));
     border-radius: 8px;
     border: 1px solid black;
     box-shadow: 8px 8px 5px rgb(51, 51, 51);
     cursor: pointer;
 }
-#comecar:hover{
-    background-image:radial-gradient(rgb(207, 241, 210), rgb(181, 238, 181));
+
+#comecar:hover {
+    background-image: radial-gradient(rgb(207, 241, 210), rgb(181, 238, 181));
+}
+
+@media (max-width: 600px) {
+    #comecar {
+        width: 100%;
+        font-size: 24px;
+    }
 }
 
 /* CSS para o desafio do dia 5 */
@@ -214,10 +251,16 @@ main {
     background-color: rgb(173, 255, 173);
 }
 
-#lista , #listaFrutas, #listaLaticinios, #listaCongelados, #listaDoces {
+#lista, #listaFrutas, #listaLaticinios, #listaCongelados, #listaDoces {
     width: 100%;
     text-decoration: underline;
     font-family: cursive;
+}
+
+@media (max-width: 600px) {
+    #parte__principal {
+        padding: 10px;
+    }
 }
 
 /*CSS para o desafio do dia 6 */
@@ -230,10 +273,16 @@ main {
     background-color: rgb(173, 255, 173);
 }
 
-#lista , #listaFrutas, #listaLaticinios, #listaCongelados, #listaDoces {
+#lista, #listaFrutas, #listaLaticinios, #listaCongelados, #listaDoces {
     width: 100%;
     text-decoration: underline;
     font-family: cursive;
+}
+
+@media (max-width: 600px) {
+    #p__principal {
+        padding: 10px;
+    }
 }
 
 /*CSS para o desafio do dia 7 */
@@ -250,17 +299,17 @@ main {
     background-color: rgb(20, 20, 20);
 }
 
-#calculadora__titulo{
+#calculadora__titulo {
     color: white;
 }
 
-#principal{
+#principal {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.caixaUm{
+.caixaUm {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -290,22 +339,7 @@ main {
     border-radius: 5px;
 }
 
-#botaoUm:hover{
-    background-color: rgb(172, 172, 172);
-    cursor: pointer;
-}
-
-#botaoDois:hover{
-    background-color: rgb(172, 172, 172);
-    cursor: pointer;
-}
-
-#botaoTres:hover{
-    background-color: rgb(172, 172, 172);
-    cursor: pointer;
-}
-
-#botaoQuatro:hover{
+#botaoUm:hover, #botaoDois:hover, #botaoTres:hover, #botaoQuatro:hover {
     background-color: rgb(172, 172, 172);
     cursor: pointer;
 }
@@ -357,4 +391,19 @@ main {
     cursor: pointer;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
-/* /////////////////////////////// */
+
+@media (max-width: 600px) {
+    #calculadora {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    #soma, #subtracao, #multiplicacao, #divisao {
+        width: 100%;
+        height: auto;
+        font-size: 24px;
+    }
+    #botaoUm, #botaoDois, #botaoTres, #botaoQuatro {
+        font-size: 24px;
+    }
+}
