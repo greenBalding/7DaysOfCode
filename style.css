@@ -236,4 +236,40 @@ main {
     font-family: cursive;
 }
 
+/*CSS para o desafio do dia 7 */
+.calculadora-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.calculadora-grid button {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.calculadora-grid button:hover {
+    background-color: #45a049;
+}
+
+.exit-button {
+    grid-column: span 2;
+    background-color: #f44336;
+}
+
+.exit-button:hover {
+    background-color: #e53935;
+}
+
 /* /////////////////////////////// */

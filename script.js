@@ -208,6 +208,7 @@ function day3() {
         }
     }
 }
+
 function day4() {
     createContent(`
         <button onclick="verificarPalpite()" id="comecar">START</button>
@@ -379,8 +380,48 @@ function day6() {
 
 function day7() {
     createContent(`
-        <div id="titulo"></div>
+        <div id="calculadora" class="calculadora-grid">
+            <button id="somar">Soma</button>
+            <button id="subtracao">Subtração</button>
+            <button id="multiplicacao">Multiplicação</button>
+            <button id="divisao">Divisão</button>
+            <button id="sair" class="exit-button">Sair</button>
+        </div>
+        <div id="resultado"></div>
     `);
 
-    // Add specific JavaScript code for Day 7 here
+    document.getElementById("somar").addEventListener("click", () => chooseOperation('somar'));
+    document.getElementById("subtracao").addEventListener("click", () => chooseOperation('subtracao'));
+    document.getElementById("multiplicacao").addEventListener("click", () => chooseOperation('multiplicacao'));
+    document.getElementById("divisao").addEventListener("click", () => chooseOperation('divisao'));
+    document.getElementById("sair").addEventListener("click", exitCalculator);
+
+    function chooseOperation(operation) {
+        const num1 = parseFloat(prompt("Digite o primeiro número:"));
+        const num2 = parseFloat(prompt("Digite o segundo número:"));
+        let result;
+
+        switch (operation) {
+            case 'somar':
+                result = num1 + num2;
+                break;
+            case 'subtracao':
+                result = num1 - num2;
+                break;
+            case 'multiplicacao':
+                result = num1 * num2;
+                break;
+            case 'divisao':
+                result = num1 / num2;
+                break;
+            default:
+                result = "Operação inválida";
+        }
+
+        document.getElementById("result").innerText = `Resultado: ${result}`;
+    }
+
+    function exitCalculator() {
+        document.getElementById("result").innerText = "Até a próxima!";
+    }
 }
