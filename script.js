@@ -380,48 +380,73 @@ function day6() {
 
 function day7() {
     createContent(`
-        <div id="calculadora" class="calculadora-grid">
-            <button id="somar">Soma</button>
-            <button id="subtracao">Subtração</button>
-            <button id="multiplicacao">Multiplicação</button>
-            <button id="divisao">Divisão</button>
-            <button id="sair" class="exit-button">Sair</button>
+        <div id="calculadora">
+        <h1 id="calculadora__titulo">Calculadora</h1>
+        <div id="principal">
+            <div class="caixaUm">
+                <div id="soma">
+                    <p id="paragrafoUm"></p>
+                    <button id="botaoUm">+</button>
+                </div>
+                <div id="subtracao">
+                    <p id="paragrafoDois"></p>
+                    <button id="botaoDois">-</button>
+                </div>
+            </div>
+            <div class="caixaDois">
+                <div id="multiplicacao">
+                    <p id="paragrafoTres"></p>
+                    <button id="botaoTres"> x </button>
+                </div>
+                <div id="divisao">
+                    <p id="paragrafoQuatro"></p>
+                    <button id="botaoQuatro">÷</button>
+                </div>
+            </div>
         </div>
-        <div id="resultado"></div>
+        <button id="botaoSair" class="botaoSair">Sair</button>
+    </div>
     `);
 
-    document.getElementById("somar").addEventListener("click", () => chooseOperation('somar'));
-    document.getElementById("subtracao").addEventListener("click", () => chooseOperation('subtracao'));
-    document.getElementById("multiplicacao").addEventListener("click", () => chooseOperation('multiplicacao'));
-    document.getElementById("divisao").addEventListener("click", () => chooseOperation('divisao'));
-    document.getElementById("sair").addEventListener("click", exitCalculator);
+    document.getElementById("botaoUm").addEventListener("click", somarNumeros);
+    document.getElementById("botaoDois").addEventListener("click", subtrairNumeros);
+    document.getElementById("botaoTres").addEventListener("click", multiplicarNumeros);
+    document.getElementById("botaoQuatro").addEventListener("click", dividirNumeros);
+    document.getElementById("botaoSair").addEventListener("click", () => alert("Até a próxima"));
 
-    function chooseOperation(operation) {
-        const num1 = parseFloat(prompt("Digite o primeiro número:"));
-        const num2 = parseFloat(prompt("Digite o segundo número:"));
-        let result;
-
-        switch (operation) {
-            case 'somar':
-                result = num1 + num2;
-                break;
-            case 'subtracao':
-                result = num1 - num2;
-                break;
-            case 'multiplicacao':
-                result = num1 * num2;
-                break;
-            case 'divisao':
-                result = num1 / num2;
-                break;
-            default:
-                result = "Operação inválida";
+    function somarNumeros(){
+        const primeiroNumero = parseInt(prompt("Digite um número"));
+        const segundoNumero = parseInt(prompt("Digite um número para somar com o número digitado anteriormente"));
+        if(primeiroNumero >= 0){
+            let resultado = primeiroNumero + segundoNumero;
+            paragrafoUm.innerHTML = `${primeiroNumero} + ${segundoNumero} = ${resultado}`;
         }
-
-        document.getElementById("result").innerText = `Resultado: ${result}`;
     }
-
-    function exitCalculator() {
-        document.getElementById("result").innerText = "Até a próxima!";
+    
+    function subtrairNumeros(){
+        const primeiroNumero = parseInt(prompt("Digite um número"));
+        const segundoNumero = parseInt(prompt("Digite um número para subtrair com o número digitado anteriormente"));
+        if(primeiroNumero >= 0){
+            let resultado = primeiroNumero - segundoNumero;
+            paragrafoDois.innerHTML = `${primeiroNumero} - ${segundoNumero} = ${resultado}`;
+        }
+    }
+    
+    function multiplicarNumeros(){
+        const primeiroNumero = parseInt(prompt("Digite um número"));
+        const segundoNumero = parseInt(prompt("Digite um número para multiplicar com o número digitado anteriormente"));
+        if(primeiroNumero >= 0){
+            let resultado = primeiroNumero * segundoNumero;
+            paragrafoTres.innerHTML = `${primeiroNumero} x ${segundoNumero} = ${resultado}`;
+        }
+    }
+    
+    function dividirNumeros(){
+        const primeiroNumero = parseInt(prompt("Digite um número"));
+        const segundoNumero = parseInt(prompt("Digite um número para dividir com o número digitado anteriormente"));
+        if(primeiroNumero >= 0){
+            let resultado = primeiroNumero / segundoNumero;
+            paragrafoQuatro.innerHTML = `${primeiroNumero} ÷ ${segundoNumero} = ${resultado}`;
+        }
     }
 }
